@@ -6,7 +6,11 @@ import cors from 'cors';
 
 const app = express();
 const port = 3001;
-app.use(cors());
+
+let corsOptions = { 
+  origin : ['http://localhost:5500'], 
+} 
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 
